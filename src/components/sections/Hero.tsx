@@ -72,20 +72,31 @@ export function Hero({
 
           <Reveal>
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/5 to-transparent p-5">
-              <div className="pointer-events-none absolute inset-0 opacity-70">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.10)_1px,transparent_1px)] bg-[length:48px]"></div>
-                <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[length:48px]"></div>
-                <div className="absolute -left-20 top-10 h-64 w-64 rounded-full bg-orange-500/20 blur-2xl"></div>
+              <div className="pointer-events-none absolute inset-0 opacity-50">
+                <div className="absolute -right-16 top-1/2 h-56 w-56 -translate-y-1/2 rounded-full bg-orange-500/15 blur-3xl" />
               </div>
 
               <div className="relative">
-                <div className="flex items-center justify-between gap-3">
-                  <div className="text-sm font-semibold text-slate-100">
-                    Індустріальний блок / заглушка
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <div className="text-sm font-semibold text-slate-100">Керівник компанії</div>
+                    <div className="mt-0.5 text-xs text-slate-400">{company.name}</div>
                   </div>
-                  <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200/90">
+                  <div className="shrink-0 rounded-xl border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200/90">
                     {company.city}
                   </div>
+                </div>
+
+                <div className="mt-5 overflow-hidden rounded-2xl border border-white/10 bg-slate-900/30">
+                  <img
+                    src="/ceo.png"
+                    alt={`Керівник ${company.name}`}
+                    className="h-auto w-full max-h-[420px] object-cover object-top sm:max-h-[480px]"
+                    width={800}
+                    height={1000}
+                    loading="eager"
+                    decoding="async"
+                  />
                 </div>
 
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
