@@ -9,6 +9,8 @@ const phoneDigits = '380974534693'
 export const company = {
   name: 'SolidMetal Odesa',
   city: 'Одеса',
+  /** Місто в місцевому відмінку після «в» (на головному екрані) */
+  cityLocative: 'Одесі',
   country: 'Україна',
   phone: '+38 (097) 453-46-93',
   email: 'platinagontar@gmail.com',

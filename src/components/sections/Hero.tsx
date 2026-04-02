@@ -25,7 +25,7 @@ export function Hero({
 
               <Reveal className="">
                 <h1 className="text-balance text-3xl font-semibold leading-tight text-fg-primary sm:text-4xl lg:text-5xl">
-                  Металоконструкції та вироби з металу на замовлення в {company.city}
+                  Металоконструкції та вироби з металу на замовлення в {company.cityLocative}
                 </h1>
               </Reveal>
 

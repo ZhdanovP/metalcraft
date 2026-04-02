@@ -12,12 +12,6 @@ export function Testimonials() {
               Відгуки
             </h2>
           </Reveal>
-          <Reveal>
-            <p className="mt-3 max-w-2xl text-fg-secondary">
-              Коротко про якість і ставлення до завдання. Заглушки — замініть на реальні відгуки
-              клієнтів.
-            </p>
-          </Reveal>
         </div>
 
         <div className="grid gap-4 sm:gap-5 md:grid-cols-3">
