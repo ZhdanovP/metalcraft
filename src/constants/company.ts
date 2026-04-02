@@ -12,7 +12,11 @@ export const company = {
   country: 'Україна',
   phone: '+38 (097) 453-46-93',
   email: 'platinagontar@gmail.com',
-  address: 'Одеса, Україна',
+  /** Для картки та карти в блоці Контакти */
+  address: 'Одеса, Приморський район, Україна',
+  /** OpenStreetMap embed (при потребі змініть bbox / marker у редакторі OSM) */
+  mapEmbedSrc:
+    'https://www.openstreetmap.org/export/embed.html?bbox=30.715%2C46.465%2C30.785%2C46.498&layer=mapnik&marker=46.4825%2C30.751',
   hours: 'Пн–Сб 9:00–18:00',
   messengers: [
     { name: 'Telegram', href: 'https://t.me/SolidMetalOd' },
