@@ -4,22 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        graphite: {
-          950: '#070b14',
-          900: '#0b1220',
-          800: '#0f1a33',
+        surface: {
+          base: '#5A5869',
+          raised: '#6A687A',
         },
-        steel: {
-          100: '#d1d5db',
-          300: '#9ca3af',
-          500: '#64748b',
+        frame: '#7F7D91',
+        accent: '#6C8CFF',
+        fg: {
+          primary: '#F1F1F5',
+          secondary: '#C7C6D1',
+          muted: '#9A99A8',
         },
       },
       boxShadow: {
-        soft: '0 10px 30px rgba(0,0,0,0.35)',
+        soft: '0 12px 40px rgba(0, 0, 0, 0.16)',
       },
     },
   },
   plugins: [],
 }
-

@@ -10,12 +10,12 @@ export function WhyUs() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mb-10">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-fg-primary sm:text-3xl">
               Чому обирають нас
             </h2>
           </Reveal>
           <Reveal>
-            <p className="mt-3 max-w-2xl text-slate-200/90">
+            <p className="mt-3 max-w-2xl text-fg-secondary">
               Робимо метал так, щоб він був безпечним, точним і готовим до монтажу.
             </p>
           </Reveal>
@@ -26,15 +26,15 @@ export function WhyUs() {
             const Icon = icons[idx] ?? ShieldCheck
             return (
               <Reveal key={b.title}>
-                <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6">
+                <div className="h-full rounded-3xl border border-frame/40 bg-surface-raised/60 p-6">
                   <div className="flex items-start justify-between gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-graphite-900/30">
-                      <Icon className="h-5 w-5 text-orange-300" />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-frame/35 bg-surface-base/40">
+                      <Icon className="h-5 w-5 text-accent" />
                     </div>
                   </div>
                   <div className="mt-4">
-                    <div className="text-lg font-semibold text-white">{b.title}</div>
-                    <div className="mt-2 text-sm leading-relaxed text-slate-200/85">
+                    <div className="text-lg font-semibold text-fg-primary">{b.title}</div>
+                    <div className="mt-2 text-sm leading-relaxed text-fg-secondary">
                       {b.description}
                     </div>
                   </div>
@@ -47,4 +47,3 @@ export function WhyUs() {
     </section>
   )
 }
-

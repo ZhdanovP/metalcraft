@@ -23,7 +23,10 @@ export function Accordion({
         const panelId = `${baseId}-${item.id}-panel`
 
         return (
-          <div key={item.id} className="rounded-2xl border border-white/10 bg-white/5">
+          <div
+            key={item.id}
+            className="rounded-2xl border border-frame/40 bg-surface-raised/80"
+          >
             <button
               id={buttonId}
               type="button"
@@ -32,9 +35,9 @@ export function Accordion({
               onClick={() => toggle(item.id)}
               className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
             >
-              <span className="text-slate-100 font-semibold">{item.q}</span>
+              <span className="font-semibold text-fg-primary">{item.q}</span>
               <ChevronDown
-                className={`h-5 w-5 text-orange-300 transition-transform ${
+                className={`h-5 w-5 text-accent transition-transform ${
                   isOpen ? 'rotate-180' : 'rotate-0'
                 }`}
               />
@@ -47,7 +50,7 @@ export function Accordion({
                 isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
               }`}
             >
-              <div className="overflow-hidden px-5 pb-4 text-slate-200/90">
+              <div className="overflow-hidden px-5 pb-4 text-fg-secondary">
                 {item.a}
               </div>
             </div>
@@ -59,4 +62,3 @@ export function Accordion({
 
   return <div className="grid gap-3 sm:gap-4">{rendered}</div>
 }
-

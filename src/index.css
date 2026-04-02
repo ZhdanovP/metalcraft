@@ -10,10 +10,18 @@ html {
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
     'Noto Sans', 'Liberation Sans', sans-serif;
+  background-color: #5a5869;
+  color: #f1f1f5;
 }
 
 /* Учитываем фиксированное меню */
 section {
   scroll-margin-top: 96px;
+}
+
+@media (min-width: 1024px) {
+  section {
+    scroll-margin-top: 100px;
+  }
 }
 

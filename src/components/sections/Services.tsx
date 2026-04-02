@@ -10,12 +10,12 @@ export function Services() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mb-10">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-fg-primary sm:text-3xl">
               Послуги
             </h2>
           </Reveal>
           <Reveal>
-            <p className="mt-3 max-w-2xl text-slate-200/90">
+            <p className="mx-auto mt-3 max-w-2xl text-center text-fg-secondary">
               Виготовляємо металоконструкції та виконуємо металообробку на замовлення —
               за ескізами, кресленнями або технічним завданням.
             </p>
@@ -26,22 +26,18 @@ export function Services() {
           {services.map((s, idx) => {
             const Icon = icons[idx] ?? Hammer
             return (
-              <Reveal key={s.title} className="">
-                <div className="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-orange-500/30 hover:bg-white/7">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-graphite-900/30">
-                      <Icon className="h-5 w-5 text-orange-300" />
+              <Reveal key={s.title} className="h-full">
+                <div className="group flex h-full flex-col rounded-3xl border border-frame/40 bg-surface-raised/60 p-6 transition-colors hover:border-accent/35 hover:bg-surface-raised/85">
+                  <div className="flex flex-1 items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-frame/35 bg-surface-base/40">
+                      <Icon className="h-5 w-5 text-accent" />
                     </div>
                     <div className="min-w-0">
-                      <h3 className="text-lg font-semibold text-white">{s.title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-slate-200/85">
+                      <h3 className="text-lg font-semibold text-fg-primary">{s.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-fg-secondary">
                         {s.description}
                       </p>
                     </div>
-                  </div>
-                  <div className="mt-5 h-px w-full bg-gradient-to-r from-white/0 via-white/10 to-white/0" />
-                  <div className="mt-4 text-xs font-medium uppercase tracking-wide text-slate-300">
-                    виробництво та контроль якості
                   </div>
                 </div>
               </Reveal>
@@ -52,4 +48,3 @@ export function Services() {
     </section>
   )
 }
-

@@ -16,15 +16,15 @@ export function Button({
   ...rest
 }: Props) {
   const base =
-    'inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-graphite-900'
+    'inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/55 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-base'
 
   const byVariant: Record<NonNullable<Props['variant']>, string> = {
     primary:
-      'bg-orange-500 text-white hover:bg-orange-400 shadow-soft',
+      'bg-accent text-fg-primary shadow-soft hover:brightness-110 active:brightness-95',
     secondary:
-      'bg-white/5 text-slate-100 border border-white/10 hover:bg-white/10',
+      'border border-frame/50 bg-surface-raised/70 text-fg-primary hover:border-frame/70 hover:bg-surface-raised',
     ghost:
-      'bg-transparent text-slate-100 hover:bg-white/5 border border-transparent hover:border-white/10',
+      'border border-transparent bg-transparent text-fg-primary hover:border-frame/40 hover:bg-surface-raised/50',
   }
 
   const bySize: Record<NonNullable<Props['size']>, string> = {
@@ -43,4 +43,3 @@ export function Button({
     </button>
   )
 }
-

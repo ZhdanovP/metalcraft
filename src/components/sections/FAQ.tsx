@@ -8,12 +8,12 @@ export function FAQ() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mb-10">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-fg-primary sm:text-3xl">
               Поширені запитання
             </h2>
           </Reveal>
           <Reveal>
-            <p className="mt-3 max-w-2xl text-slate-200/90">
+            <p className="mt-3 max-w-2xl text-fg-secondary">
               Відповіді на часті питання перед тим, як ви надішлете заявку.
             </p>
           </Reveal>
@@ -31,4 +31,3 @@ export function FAQ() {
     </section>
   )
 }
-

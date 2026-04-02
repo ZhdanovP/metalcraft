@@ -3,11 +3,11 @@ export type NavItem = { id: string; label: string }
 export const navItems: NavItem[] = [
   { id: 'about', label: 'Про компанію' },
   { id: 'services', label: 'Послуги' },
-  { id: 'why', label: 'Чому обирають нас' },
-  { id: 'steps', label: 'Етапи роботи' },
-  { id: 'works', label: 'Наші роботи' },
+  { id: 'why', label: 'Переваги' },
+  { id: 'steps', label: 'Етапи' },
+  { id: 'works', label: 'Роботи' },
   { id: 'testimonials', label: 'Відгуки' },
-  { id: 'faq', label: 'Поширені запитання' },
+  { id: 'faq', label: 'FAQ' },
   { id: 'contact', label: 'Контакти' },
 ]
 
@@ -64,23 +64,35 @@ export const steps: Step[] = [
   { title: 'Доставка та монтаж', description: 'Доставимо та встановимо конструкцію в Одесі та по всій Україні.' },
 ]
 
-export type Work = { category: string }
+export type Work = { category: string; image: string }
 
 export const works: Work[] = [
-  { category: 'Навіси' },
-  { category: 'Сходи' },
-  { category: 'Огорожі' },
-  { category: 'Ворота' },
-  { category: 'Каркаси' },
-  { category: 'Індивідуальні вироби' },
+  { category: 'Навіси', image: '/samples/Canopies.jpg' },
+  { category: 'Сходи', image: '/samples/Stairs.jpg' },
+  { category: 'Огорожі', image: '/samples/Fences.jpg' },
+  { category: 'Ворота', image: '/samples/gate.jpg' },
+  { category: 'Балкони', image: '/samples/balconies.jpg' },
+  { category: 'Індивідуальні вироби', image: '/samples/individual.jpg' },
 ]
 
-export type Testimonial = { name: string; text: string }
+export type Testimonial = { name: string; text: string; photo: string }
 
 export const testimonials: Testimonial[] = [
-  { name: 'Андрій, Одеса', text: 'Замовили огорожі та хвіртку. Зробили швидко, якісно та акуратно.' },
-  { name: 'Катерина, Одеса', text: 'Сподобалося ставлення до креслень: усе за розмірами, монтаж без затримок.' },
-  { name: 'Володимир, Україна', text: 'Конструкція за індивідуальним проєктом — вийшло навіть краще, ніж очікували.' },
+  {
+    name: 'Катерина, Одеса',
+    text: 'Сподобалося ставлення до креслень: усе за розмірами, монтаж без затримок.',
+    photo: '/review/kate.png',
+  },
+  {
+    name: 'Андрій, Одеса',
+    text: 'Замовили огорожі та хвіртку. Зробили швидко, якісно та акуратно.',
+    photo: '/review/andrew.png',
+  },
+  {
+    name: 'Володимир, Чорноморськ',
+    text: 'Конструкція за індивідуальним проєктом — вийшло навіть краще, ніж очікували.',
+    photo: '/review/vova.png',
+  },
 ]
 
 export type FaqItem = { q: string; a: string }

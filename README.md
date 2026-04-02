@@ -1,4 +1,4 @@
-# MetalCraft
+# SolidMetal
 
 Vite + React + TypeScript. This README describes how to run the app locally and how to stop it.
 

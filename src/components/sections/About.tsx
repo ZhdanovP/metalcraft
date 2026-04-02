@@ -1,4 +1,5 @@
 import { Reveal } from '../ui/Reveal'
+import { company } from '../../constants/company'
 
 export function About() {
   return (
@@ -7,12 +8,12 @@ export function About() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div className="space-y-4">
             <Reveal>
-              <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              <h2 className="text-2xl font-semibold tracking-tight text-fg-primary sm:text-3xl">
                 Про компанію
               </h2>
             </Reveal>
             <Reveal>
-              <p className="text-base leading-relaxed text-slate-200/90">
+              <p className="text-base leading-relaxed text-fg-secondary">
                 Виготовляємо металеві вироби та конструкції на замовлення. Працюємо з індивідуальними
                 проєктами, дотримуємося точності виконання та використовуємо якісні матеріали.
                 Підготовляємо вироби з урахуванням креслень і вимог об’єкта, щоб монтаж пройшов без
@@ -20,7 +21,7 @@ export function About() {
               </p>
             </Reveal>
             <Reveal>
-              <p className="text-base leading-relaxed text-slate-200/90">
+              <p className="text-base leading-relaxed text-fg-secondary">
                 Працюємо в Одесі та по всій Україні: від розробки рішення до виготовлення,
                 доставки та встановлення.
               </p>
@@ -36,42 +37,41 @@ export function About() {
                 ].map((t) => (
                   <div
                     key={t}
-                    className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+                    className="rounded-2xl border border-frame/40 bg-surface-raised/70 px-4 py-3"
                   >
-                    <div className="text-sm font-semibold text-white">{t}</div>
+                    <div className="text-sm font-semibold text-fg-primary">{t}</div>
                   </div>
                 ))}
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div className="rounded-2xl border border-frame/40 bg-surface-base/35 p-4">
+                <div className="text-xs uppercase tracking-wide text-fg-muted">Географія</div>
+                <div className="mt-2 text-sm font-semibold text-fg-primary">
+                  Одеса + вся Україна
+                </div>
+                <div className="mt-1 text-sm text-fg-secondary">
+                  Доставка та монтаж залежать від обсягу робіт і умов об’єкта.
+                </div>
               </div>
             </Reveal>
           </div>
 
           <Reveal>
-            <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/5 to-transparent p-6 shadow-soft">
-              <div className="text-xs uppercase tracking-wide text-slate-300">Фокус</div>
-              <div className="mt-3 space-y-3">
-                {[
-                  'Проєктування',
-                  'Виготовлення та зварювання',
-                  'Підготовка до монтажу',
-                  'Контроль якості',
-                ].map((t) => (
-                  <div key={t} className="flex items-start gap-3">
-                    <div className="mt-1 h-2 w-2 rounded-full bg-orange-400/90" />
-                    <div className="text-slate-100">{t}</div>
-                  </div>
-                ))}
+            <div className="relative overflow-hidden rounded-3xl border border-frame/40 bg-surface-raised/45 shadow-soft">
+              <div className="pointer-events-none absolute inset-0 opacity-50">
+                <div className="absolute -right-16 top-1/4 h-48 w-48 rounded-full bg-accent/10 blur-3xl" />
               </div>
-              <div className="mt-6 rounded-2xl border border-white/10 bg-graphite-900/30 p-4">
-                <div className="text-xs uppercase tracking-wide text-slate-300">
-                  Географія
-                </div>
-                <div className="mt-2 text-sm font-semibold text-white">
-                  Одеса + вся Україна
-                </div>
-                <div className="mt-1 text-sm text-slate-200/80">
-                  Доставка та монтаж залежать від обсягу робіт і умов об’єкта.
-                </div>
-              </div>
+              <img
+                src="/ceo.jpg"
+                alt={`Керівник компанії — ${company.name}`}
+                className="relative h-auto w-full max-h-[min(520px,70vh)] object-cover object-top"
+                width={800}
+                height={1000}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </Reveal>
         </div>
@@ -79,4 +79,3 @@ export function About() {
     </section>
   )
 }
-
